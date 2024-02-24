@@ -1,0 +1,259 @@
+{
+  "info": {
+    "_postman_id": "Your_Postman_Collection_Id",
+    "name": "API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Websites",
+      "item": [
+        {
+          "name": "Get all websites",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8001/api/websites",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "websites"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create a new website",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"name\": \"Example Website\",\n\t\"url\": \"https://example.com\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8001/api/websites",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "websites"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get a specific website",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8001/api/websites/{website}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "websites", "{website}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update a specific website",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"name\": \"Updated Name\",\n\t\"url\": \"https://updated-example.com\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8001/api/websites/{website}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "websites", "{website}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete a specific website",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8001/api/websites/{website}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "websites", "{website}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Subscribe to a website",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"email\": \"user@example.com\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8001/api/websites/{website}/subscribe",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "websites", "{website}", "subscribe"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Unsubscribe from a website",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8001/api/websites/{website}/unsubscribe/{email}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "websites", "{website}", "unsubscribe", "{email}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get subscriptions for a website",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8001/api/websites/{website}/subscriptions",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "websites", "{website}", "subscriptions"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Posts",
+      "item": [
+        {
+          "name": "Get all posts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8001/api/posts",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "posts"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create a new post",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"website_id\": \"1\",\n\t\"title\": \"New Post Title\",\n\t\"description\": \"Post description here.\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8001/api/posts",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "posts"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get a specific post",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8001/api/posts/{post}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "posts", "{post}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update a specific post",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"title\": \"Updated Post Title\",\n\t\"description\": \"Updated post description.\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8001/api/posts/{post}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "posts", "{post}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete a specific post",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8001/api/posts/{post}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8001",
+              "path": ["api", "posts", "{post}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

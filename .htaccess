@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect all requests to the public folder
+    RewriteRule ^(.*)$ public/$1 [L]
+
+    # Protect the .env file
+    <Files .env>
+        Order Allow,Deny
+        Deny from all
+    </Files>
+
+    # Handle front controller
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
